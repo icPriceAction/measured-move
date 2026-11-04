@@ -10,7 +10,6 @@
 // Repository:   https://github.com/icPriceAction/measured-move
 // YouTube:      https://youtube.com/@icPriceAction
 // Support:      https://buymeacoffee.com/icpriceaction
-// Prop Code:    ICPAT (Discounts: https://icpriceaction.com/prop-firms.html)
 //
 // License:      Free for personal trading use. Commercial resale, redistribution,
 //               or repackaging is strictly prohibited. See LICENSE in official repository.
@@ -20,20 +19,20 @@
 //               leg 2's duration without changing the target.
 //
 // Changelog:
-//   v1.2.1 (2026-11-03) - Initial public release. Cleaned and optimized by icPriceAction.
-//   v1.2.1 (2026-11-03) - Direct2D brushes cached per render target and released on render target change and termination.
-//   v1.2.1 (2026-11-03) - Badge text layout cached; rebuilt only when target, leg size, time ratio, font or instrument changes.
-//   v1.2.1 (2026-11-03) - Pullback anchor seeded on the first click so no unplaced anchor is converted to screen coordinates.
-//   v1.2.1 (2026-11-03) - Moved to the icPA namespace; properties regrouped (1. General / 2. Visuals) with descriptions.
-//   v1.2.0 (date unknown) - Time handle on the leg 2 arrowhead: drag to change leg 2 duration (Leg 2 Time Ratio); target price never changes.
-//   v1.2.0 (date unknown) - Projection measured in chart space: works on tick/volume/range/Renko charts and across session breaks and weekends.
-//   v1.2.0 (date unknown) - Leg 2 and the target previewed live while placing the pullback point; no phantom leg 2 while building.
-//   v1.2.0 (date unknown) - Magnet mode respected when editing anchors; whole-tool move uses MoveAnchor.
-//   v1.2.0 (date unknown) - Prices formatted and rounded per instrument (FX, fractional bonds, etc).
-//   v1.2.0 (date unknown) - Badge sized to its text, kept inside the panel, placed below the line on bearish moves.
-//   v1.2.0 (date unknown) - Locked tools can no longer enter edit mode.
-//   v1.2.0 (date unknown) - Tool stays visible when its anchors scroll off-screen (target line extends right).
-//   v1.2.0 (date unknown) - Standard NinjaTrader Stroke properties and font picker; antialiased rendering, cached text format, custom menu icon.
+//   v1.2.1 - Initial public release. Cleaned and optimized by icPriceAction.
+//          - Direct2D brushes cached per render target and released on render target change and termination.
+//          - Badge text layout cached; rebuilt only when target, leg size, time ratio, font or instrument changes.
+//          - Pullback anchor seeded on the first click so no unplaced anchor is converted to screen coordinates.
+//          - Moved to the icPA namespace; properties regrouped (1. General / 2. Visuals) with descriptions.
+//   v1.2.0 - Time handle on the leg 2 arrowhead: drag to change leg 2 duration (Leg 2 Time Ratio); target price never changes.
+//          - Projection measured in chart space: works on tick/volume/range/Renko charts and across session breaks and weekends.
+//          - Leg 2 and the target previewed live while placing the pullback point; no phantom leg 2 while building.
+//          - Magnet mode respected when editing anchors; whole-tool move uses MoveAnchor.
+//   v1.1.0 - Prices formatted and rounded per instrument (FX, fractional bonds, etc).
+//          - Badge sized to its text, kept inside the panel, placed below the line on bearish moves.
+//          - Locked tools can no longer enter edit mode.
+//   v1.0.0 - Tool stays visible when its anchors scroll off-screen (target line extends right).
+//          - Standard NinjaTrader Stroke properties and font picker; antialiased rendering, cached text format, custom menu icon.
 // =========================================================================================
 
 #region Using declarations
@@ -157,7 +156,7 @@ namespace NinjaTrader.NinjaScript.DrawingTools.icPA
 					+ "The target is the pullback price plus leg 1's price distance, shown with a target line and badge. "
 					+ "Drag the square arrowhead handle to change leg 2's duration without moving the target. Works on any chart and bar type.\r\n"
 					+ "Developed by Istvan Cebrian | https://icpriceaction.com\r\n"
-					+ "Support this free tool: https://buymeacoffee.com/icpriceaction | Prop Firm Discount Code: ICPAT (https://icpriceaction.com/prop-firms.html)";
+					+ "Support this free tool: https://buymeacoffee.com/icpriceaction";
 
 				// All anchors start unplaced (IsEditing = true) and are placed one per click.
 				anchorLeg1Start = new ChartAnchor { IsBrowsable = true, IsEditing = true, DrawingTool = this, DisplayName = "Leg 1 start" };

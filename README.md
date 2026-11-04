@@ -2,10 +2,9 @@
 
 [![NinjaTrader 8](https://img.shields.io/badge/Platform-NinjaTrader%208-black.svg)](https://ninjatrader.com)
 [![License: Personal Use](https://img.shields.io/badge/License-Personal%20Use-6E6E6E.svg)](#license)
+[![Support: Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/icpriceaction)
 [![YouTube Guide](https://img.shields.io/badge/YouTube-Watch%20Walkthrough-red.svg)](https://youtube.com/@icPriceAction)
 [![Website](https://img.shields.io/badge/Website-icpriceaction.com-111213.svg)](https://icpriceaction.com)
-[![Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/icpriceaction)
-[![Prop Discounts](https://img.shields.io/badge/Prop%20Discounts-Code%20ICPAT-black.svg)](https://icpriceaction.com/prop-firms.html)
 
 A specialized Drawing Tool engineered for Price Action day trading. Three clicks mark leg 1 and the pullback, and the tool projects an equal leg 2 with the measured move target price drawn as a line and labeled badge.
 
@@ -21,13 +20,31 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 
 ---
 
+## ☕ Support the Project
+
+All tools by **icPriceAction** are **100% free and open-source for personal trading use**. There are no paywalls, subscriptions, or locked features and there never will be!
+
+Developing, optimizing for zero latency on multiple charts/instruments, and maintaining documentation and releases takes a **considerable amount of personal time and ongoing effort**. 
+
+If this tool saves you screen time, improves your execution, or cleans up your charts, buying a coffee is the best way to support continued development:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/icpriceaction" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="190">
+  </a>
+</p>
+
+> **[☕ Support Development on Buy Me a Coffee](https://buymeacoffee.com/icpriceaction)**
+
+---
+
 ## ⚡ Key Features
 
 - **Leg 1 = Leg 2 Projection:** Click the start and end of leg 1, then the pullback. The target is the pullback price plus leg 1's price distance, rounded to the instrument's tick size. Leg 2 and the target preview live while you place the pullback.
 - **Adjustable Leg 2 Duration:** Drag the square handle on the arrowhead left or right to stretch or shorten leg 2 in time (0.1× to 10× leg 1). The target price never moves.
 - **Target Line & Badge:** An optional horizontal target line extends to the right edge of the chart, with a badge showing the target price, leg size in points and ticks, and the time ratio when it is not 1×. The badge sits above the line on bullish moves and below it on bearish moves.
-- **PATS & Context Aligned:** Designed for Price Action principles (Mack / Thomas Wade) and disciplined futures execution.
-- **Zero Chart Lag:** Native C# execution optimized to prevent UI freezes on high-frequency 2000-tick ES/MES charts.
+- **PATS & Context Aligned:** Designed for Price Action principles and disciplined futures execution.
+- **Zero Chart Lag:** Native C# execution optimized to prevent UI freezes on high-frequency tick charts.
 - **Clean Visuals:** Complementary default palette that preserves candlestick clarity without chart clutter.
 - **Fully Customizable:** Configure colors, thresholds, offsets, and alerts via the native NT8 settings panel.
 
@@ -44,7 +61,7 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 ## 📥 Installation Guide
 
 1. Head to the **[Releases](https://github.com/icPriceAction/measured-move/releases)** tab of this repository.
-2. Download the latest release `.zip` file (`icPriceAction_MeasuredMove_v1.2.1.zip`).
+2. Download the latest release `.zip` file.
    - *Note: Do NOT extract or unzip the file.*
 3. Open **NinjaTrader 8**.
 4. In the Control Center, navigate to:
@@ -81,25 +98,16 @@ The three anchor points (Leg 1 start, Leg 1 end, Leg 2 start / pullback) can als
 
 ## 📝 Changelog
 
-- **v1.2.1** (2026-11-03) - Initial public release. Cleaned and optimized by icPriceAction.
-- **v1.2.0** (date unknown) - Time handle on the leg 2 arrowhead: drag to change leg 2 duration (Leg 2 Time Ratio); target price never changes.
-- **v1.2.0** (date unknown) - Projection measured in chart space: works on tick/volume/range/Renko charts and across session breaks and weekends.
-- **v1.2.0** (date unknown) - Leg 2 and the target previewed live while placing the pullback point; no phantom leg 2 while building.
-- **v1.2.0** (date unknown) - Magnet mode respected when editing anchors; whole-tool move uses MoveAnchor.
-- **v1.2.0** (date unknown) - Prices formatted and rounded per instrument (FX, fractional bonds, etc).
-- **v1.2.0** (date unknown) - Badge sized to its text, kept inside the panel, placed below the line on bearish moves.
-- **v1.2.0** (date unknown) - Locked tools can no longer enter edit mode.
-- **v1.2.0** (date unknown) - Tool stays visible when its anchors scroll off-screen (target line extends right).
-- **v1.2.0** (date unknown) - Standard NinjaTrader Stroke properties and font picker; antialiased rendering, cached text format, custom menu icon.
-
----
-
-## ☕ Support the Project
-
-All tools provided by **icPriceAction** are 100% free and open-source for personal trading use. These tools, even though supported by AI, have taken considerable time to design, build, test and package. If these tools bring you value, consider supporting continued development:
-
-- **Prop Firm Traders:** Use discount code **`ICPAT`** at checkout across top futures prop evaluation firms ([View Active Discounts](https://icpriceaction.com/prop-firms.html)).
-- **Profitable Traders:** Send a one-time tip to support my continued support and time, server hosting and open-source updates via [Buy Me a Coffee](https://buymeacoffee.com/icpriceaction).
+- **v1.2.1** - Initial public release. Cleaned and optimized by icPriceAction.
+- **v1.2.0** - Time handle on the leg 2 arrowhead: drag to change leg 2 duration (Leg 2 Time Ratio); target price never changes.
+- **v1.2.0** - Projection measured in chart space: works on tick/volume/range/Renko charts and across session breaks and weekends.
+- **v1.2.0** - Leg 2 and the target previewed live while placing the pullback point; no phantom leg 2 while building.
+- **v1.2.0** - Magnet mode respected when editing anchors; whole-tool move uses MoveAnchor.
+- **v1.1.0** - Prices formatted and rounded per instrument (FX, fractional bonds, etc).
+- **v1.1.0** - Badge sized to its text, kept inside the panel, placed below the line on bearish moves.
+- **v1.1.0** - Locked tools can no longer enter edit mode.
+- **v1.0.0** - Tool stays visible when its anchors scroll off-screen (target line extends right).
+- **v1.0.0** - Standard NinjaTrader Stroke properties and font picker; antialiased rendering, cached text format, custom menu icon.
 
 ---
 
